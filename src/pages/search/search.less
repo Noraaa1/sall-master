@@ -1,0 +1,38 @@
+@import '../../less/custom.less';
+.search-page {
+  height: 100%;
+  width: 100%;
+  .title {
+    padding: 40px 0;
+    text-align: center;
+    color: @font-color-light;
+    h1 {
+      color: @template-text-color;
+      font-size: 32px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .search-box {
+    display: flex;
+    justify-content: center;
+    & > div {
+      text-align: center;
+    }
+    .salt-search {
+      width: 560px;
+    }
+    .select-box {
+      margin-top: 20px;
+      width: 720px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      :global(.ant-select) {
+        width: 160px;
+        margin-top: 12px;
+      }
+    }
+  }
+}

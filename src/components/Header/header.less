@@ -1,0 +1,46 @@
+@import '../../less/custom';
+
+@header: header;
+.@{header} {
+  background: @font-color;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  top: 0;
+  :global(.home-page) {
+    padding: 0 24px;
+  }
+  &-logo {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    line-height: 64px;
+    & img {
+      vertical-align: middle;
+      display: inline-block;
+    }
+    & a {
+      display: block;
+    }
+  }
+  &-menu {
+    float: right;
+    :global(.ant-menu ){
+      line-height: 64px;
+      background: transparent;
+      color: @template-text-color-light;
+      height: 64px;
+      border-bottom-color: transparent;
+      position: relative;
+      a {
+        color: @template-text-color-light;
+        &:hover {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+  :global(.ant-menu-item-selected) a {
+    color: @primary-color;
+  }
+}
